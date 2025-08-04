@@ -5,7 +5,7 @@ This project focuses on the fundamental steps of cleaning and preparing the clas
 
 ---
 
-## ## Tasks Performed
+ Tasks Performed
 
 The notebook or script performs the following data preprocessing tasks:
 
@@ -25,7 +25,7 @@ The notebook or script performs the following data preprocessing tasks:
 
 ---
 
-## ## Tools & Libraries
+ Tools & Libraries
 
 * **Python**
 * **Pandas**: For data manipulation and analysis.
@@ -35,7 +35,7 @@ The notebook or script performs the following data preprocessing tasks:
 
 ---
 
-## ## How to Run
+ How to Run
 
 1.  Make sure you have all the required libraries installed.
 2.  Place the `titanic.csv` dataset in the same directory as the script.
