@@ -1,5 +1,5 @@
 
-# Titanic Dataset: Data Cleaning & Preprocessing 🚢
+# Titanic Dataset: Task 1- Data Cleaning & Preprocessing 🚢
 
 This project focuses on the fundamental steps of cleaning and preparing the classic Titanic dataset for machine learning analysis. The goal is to transform the raw data into a clean, structured format suitable for training predictive models.
 
