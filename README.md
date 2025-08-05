@@ -1,44 +1,57 @@
+# Titanic Survival Analysis: Data Preprocessing & EDA 🚢
+This project performs a complete data analysis workflow on the classic Titanic dataset. The project is divided into two main parts:
 
-# Titanic Dataset: Task 1- Data Cleaning & Preprocessing 🚢
+Data Cleaning & Preprocessing: Transforming the raw data into a clean, machine-learning-ready format.
 
-This project focuses on the fundamental steps of cleaning and preparing the classic Titanic dataset for machine learning analysis. The goal is to transform the raw data into a clean, structured format suitable for training predictive models.
+Exploratory Data Analysis (EDA): Uncovering patterns, trends, and key insights from the cleaned data through visualization.
 
----
+## Project Workflow
+### Task 1: Data Cleaning & Preprocessing
+The initial raw data was processed to create a clean and structured dataset (titanic_cleaned.csv). The key steps included:
 
- Tasks Performed
+Handling Missing Values: Imputed 'Age' with the median and dropped the 'Cabin' column.
 
-The notebook or script performs the following data preprocessing tasks:
+Feature Engineering & Encoding: Converted categorical columns ('Sex', 'Embarked') into numerical formats using mapping and one-hot encoding. Dropped irrelevant columns ('Name', 'Ticket').
 
-1.  **Data Exploration**: Loaded the dataset and performed an initial analysis of its structure, data types, and summary statistics.
-2.  **Handling Missing Values**:
-    * Imputed missing values in the **Age** column using the median.
-    * Dropped the **Cabin** column due to a high percentage of missing data.
-3.  **Feature Engineering & Encoding**:
-    * Dropped irrelevant columns (**Name**, **Ticket**).
-    * Encoded the binary **Sex** column into numerical format (0/1).
-    * Performed one-hot encoding on the multi-category **Embarked** column.
-4.  **Feature Scaling**:
-    * Standardized the numerical features **Age** and **Fare** using `StandardScaler` from Scikit-learn to bring them to a comparable scale.
-5.  **Outlier Removal**:
-    * Visualized outliers in the **Fare** column using a boxplot.
-    * Removed extreme outliers based on the Interquartile Range (IQR) method.
+Feature Scaling: Standardized 'Age' and 'Fare' to ensure they are on a comparable scale.
 
----
+Outlier Removal: Identified and removed extreme outliers from the 'Fare' column using the IQR method.
 
- Tools & Libraries
+### Task 2: Exploratory Data Analysis (EDA)
+Using the cleaned data, an exploratory analysis was conducted to understand the factors influencing passenger survival.
 
-* **Python**
-* **Pandas**: For data manipulation and analysis.
-* **NumPy**: For numerical operations.
-* **Matplotlib & Seaborn**: For data visualization.
-* **Scikit-learn**: For feature scaling (`StandardScaler`).
+Summary Statistics: Generated descriptive statistics to get a numerical overview.
 
----
+Distribution Analysis: Created histograms and boxplots to visualize the distribution of numerical features like 'Age' and 'Fare'.
 
- How to Run
+Correlation Analysis: A heatmap was generated to visualize the correlation between different features.
 
-1.  Make sure you have all the required libraries installed.
-2.  Place the `titanic.csv` dataset in the same directory as the script.
-3.  Run the Python script.
+Pattern Identification: Created targeted visualizations to analyze the relationship between key features and the survival outcome.
 
+## Key Insights from EDA
+The analysis revealed several strong factors influencing survival on the Titanic:
+
+Gender: Being female was the strongest predictor of survival. Female passengers had a survival rate of over 70%, while males had a rate below 20%.
+
+Passenger Class (Pclass): There was a clear class-based hierarchy in survival. First-class passengers had a significantly higher survival rate than third-class passengers.
+
+Fare: Higher fares correlated positively with survival, reinforcing the 'Passenger Class' insight.
+
+## Tools & Libraries
+Python
+
+Pandas: For data manipulation and analysis.
+
+NumPy: For numerical operations.
+
+Matplotlib & Seaborn: For data visualization.
+
+Scikit-learn: For feature scaling.
+
+## How to Run
+Ensure all required libraries are installed.
+
+Place the raw titanic.csv dataset in the project directory.
+
+Execute the Python script. The script will first perform the cleaning steps from Task 1 and then generate the EDA plots and insights from Task 2.
 The script will process the data and save the clean version.
